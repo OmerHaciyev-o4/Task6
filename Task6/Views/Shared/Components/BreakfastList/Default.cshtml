@@ -1,0 +1,21 @@
+﻿@model Task6.Models.BreakfastListViewModel
+
+@foreach (var breakfast in Model.Breakfasts)
+{
+    <div class="menus d-flex align-items-center">
+        <div class="menu-img rounded-circle">
+            <img class="img-fluid" src="~/images/@(breakfast.URL)">
+        </div>
+        <div class="text-wrap">
+            <div class="row align-items-start">
+                <div class="col-8">
+                    <h4>@breakfast.Name</h4>
+                </div>
+                <div class="col-4">
+                    <h4 class="text-muted menu-price">$@breakfast.Price</h4>
+                </div>
+            </div>
+            <p>@breakfast.Info</p>
+        </div>
+    </div>
+}
